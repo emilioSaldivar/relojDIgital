@@ -1,2 +1,1 @@
-# relojDIgital
-# relojDIgital
+## aplicacion sencilla ejemplo de mini proyecto con javascript manejo de dom
