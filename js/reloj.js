@@ -1,4 +1,5 @@
 const mostrarReloj = () =>{
+
     let fecha =  new Date();
     let hr = formatoHora(fecha.getHours());
     let min = formatoHora(fecha.getMinutes());
@@ -7,11 +8,13 @@ const mostrarReloj = () =>{
 
     const meses = ['Ene', 'Feb', 'Marz', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
     const dias = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'];
+
     let diaSemana = dias[fecha.getDay()];
     let diaDelMes = fecha.getDate();
     let mes = meses[fecha.getMonth()];
     let anho = fecha.getFullYear();
     let fechaTexto = `${diaSemana}, ${diaDelMes} ${mes}, ${anho}`;
+
     document.getElementById('fecha').innerHTML = fechaTexto;
     document.getElementById('contenedor').classList.toggle('animar');
 }
@@ -21,6 +24,5 @@ const formatoHora = (hora ) =>{
         hora = '0' + hora;
     return hora;
 }
-
 // se simula la actualizacion de los segundos en tiempo real
 setInterval(mostrarReloj, 1000);
